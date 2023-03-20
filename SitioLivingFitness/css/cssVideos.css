@@ -1,0 +1,123 @@
+﻿.todo-videos {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Lucida Console';
+    font-weight: bold;
+}
+
+.heading {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.contenedor-total {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+    .contenedor-total .main-video {
+        background: #fff;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+        .contenedor-total .main-video iframe {
+            width: 100%;
+            height: 418px;
+            border-radius: 5px;
+        }
+
+        .contenedor-total .main-video .titleVideo {
+            color: #333;
+            font-size: 24px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+.linea-video {
+    background: #fff;
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+
+.contenedor-total .video-list {
+    background: #fff;
+    border-radius: 5px;
+    height: 520px;
+    overflow-y: scroll;
+}
+
+    .contenedor-total .video-list::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .contenedor-total .video-list::-webkit-scrollbar-track {
+        background: #ccc;
+        border-radius: 50px;
+    }
+
+    .contenedor-total .video-list::-webkit-scrollbar-thumb {
+        background: #666;
+        border-radius: 50px;
+    }
+
+    .contenedor-total .video-list .vid iframe {
+        width: 100px;
+        border-radius: 5px;
+    }
+
+    .contenedor-total .video-list .vid {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: #f7f7f7;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid rgba(0,0,0,.1);
+        cursor: pointer;
+    }
+
+        .contenedor-total .video-list .vid:hover {
+            background: #eee;
+        }
+
+        .contenedor-total .video-list .vid.active {
+            background: #2980b9;
+        }
+
+            .contenedor-total .video-list .vid.active .titleVideo {
+                color: #fff;
+            }
+
+        .contenedor-total .video-list .vid .titleVideo {
+            color: #333;
+            font-size: 18px;
+        }
+
+@media (max-width:991px) {
+    .contenedor-total {
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .contenedor-total {
+        grid-template-columns: 1fr;
+    }
+}
